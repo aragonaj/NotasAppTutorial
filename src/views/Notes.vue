@@ -1,5 +1,6 @@
 <script setup>
 import HeaderComponent from '../components/HeaderComponent.vue';
+import NoteCard from '../components/NoteCard.vue';
 import { useNoteStore } from '../stores/note';
 
 const noteStore = useNoteStore();
@@ -12,7 +13,7 @@ const noteStore = useNoteStore();
 
         <ul class="note-list">
             <li v-for="note in noteStore.notes" :key="note.id">
-                {{ note.title }}
+                <NoteCard :note="note" />
             </li>
         </ul>
     </section>
