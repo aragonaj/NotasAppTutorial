@@ -3,7 +3,7 @@
 </script>
 
 <template>
-    <h2>Home page</h2>
+    <h2>Notes</h2>
 </template>
 
 <style>
