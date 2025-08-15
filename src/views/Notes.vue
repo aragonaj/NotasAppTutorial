@@ -1,10 +1,12 @@
 <script setup>
+import HeaderComponent from '../components/HeaderComponent.vue';
 import { useNoteStore } from '../stores/note';
 
 const noteStore = useNoteStore();
 </script>
 
 <template>
+    <HeaderComponent />
     <section id="notes-page">
         <h2>Notes</h2>
 
