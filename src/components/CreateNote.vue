@@ -1,11 +1,17 @@
 <script setup>
 import { ref } from 'vue';
+import { useNoteStore } from '../stores/note';
 
+const noteStore = useNoteStore();
+const handleSubmit = () => {
+    noteStore.addNote(title.value);
+    title.value = "";
+}
 const title = ref("");
 </script>
 
 <template>
-    <form class="note-form">
+    <form class="note-form" @submit.prevent="handleSubmit">
         <input type="text" class="note-title" placeholder="Nueva nota" v-model="title" />
         <button class="create-btn">+</button>
     </form>
