@@ -1,5 +1,7 @@
 <script setup>
+import { useNoteStore } from '../stores/note';
 
+const noteStore = useNoteStore();
 </script>
 
 <template>
