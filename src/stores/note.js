@@ -2,18 +2,7 @@ import { defineStore } from "pinia";
 import { ref } from "vue";
 
 export const useNoteStore = defineStore("notes", () => {
-    const notes = ref([
-        {
-            id: 1,
-            title: "Ir al médico",
-            marked: false
-        },
-        {
-            id: 2,
-            title: "Contraseña del WiFi: 123456",
-            marked: false
-        }
-    ]);
+    const notes = ref([]);
 
     const createId = () => {
         // fórmula para aleatorizar un número basado en la fecha
@@ -32,4 +21,7 @@ export const useNoteStore = defineStore("notes", () => {
         notes,
         addNote,
     };
-})
+}, 
+{
+    persist: true
+});
