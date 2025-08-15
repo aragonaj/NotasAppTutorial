@@ -21,7 +21,7 @@ export const useNoteStore = defineStore("notes", () => {
     }
 
     const addNote = (title) => {
-        notes.value.push({
+        notes.value.unshift({
             id: createId(),
             title,
             marked: false
