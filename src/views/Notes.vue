@@ -17,6 +17,9 @@ const noteStore = useNoteStore();
             <li v-for="note in noteStore.notes" :key="note.id">
                 <NoteCard :note="note" />
             </li>
+            <li v-if="!noteStore.notes.length" class="empty-msg">
+                <h2>No hay nada que mostrar. Crea tu primera nota</h2>
+            </li>
         </ul>
     </section>
 </template>
@@ -47,5 +50,10 @@ const noteStore = useNoteStore();
     gap: 20px;
 
     border: 10px solid brown;
+}
+
+.empty-msg {
+    text-align: center;
+    font-size: 1.5rem;
 }
 </style>
